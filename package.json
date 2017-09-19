@@ -1,0 +1,40 @@
+{
+  "name": "insureksa-api",
+  "version": "1.0.0",
+  "description": "RESTful Insureksa Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "6.11.1",
+    "npm": ">=3.10.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abidra/insureksa-api.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "Authentication",
+    "JWT",
+    "Tutorial"
+  ],
+  "author": "Abid Rakhmansyah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abidra/insureksa-api/issues"
+  },
+  "homepage": "https://github.com/abidra/insureksa-api#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.7.2",
+    "nodemailer": "^4.0.1",
+    "nodemailer-express-handlebars": "^2.0.0"
+  }
+}
