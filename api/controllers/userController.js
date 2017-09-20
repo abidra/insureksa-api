@@ -50,7 +50,13 @@ exports.register = function(req, res) {
 exports.index = function(req, res) {
   return res.sendFile(path.resolve('./public/home.html'));
 };
-
+exports.read_a_user = function(req, res) {
+  Task.findById(req.params.user._id, function(err, task) {
+    if (err)
+      res.send(err);
+    res.json(task);
+  });
+};
 exports.render_forgot_password_template = function(req, res) {
   return res.sendFile(path.resolve('./public/forgot-password.html'));
 };
