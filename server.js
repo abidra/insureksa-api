@@ -4,13 +4,13 @@ var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
-  Task = require('./api/models/todoListModel'),
+  Task = require('./api/models/dompetModel'),
   User = require('./api/models/userModel'),
   bodyParser = require('body-parser'),
   jsonwebtoken = require("jsonwebtoken");
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb', {useMongoClient: true});
+mongoose.connect('mongodb://localhost/insureksa', {useMongoClient: true});
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
     next();
   }
 });
-var routes = require('./api/routes/todoListRoutes');
+var routes = require('./api/routes/Routes');
 routes(app);
 
 app.use(function(req, res) {
@@ -39,6 +39,6 @@ app.use(function(req, res) {
 
 app.listen(port);
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('Insureksa RESTful API server started on: ' + port);
 
 module.exports = app;
